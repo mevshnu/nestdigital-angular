@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AddfriendComponent {
 
+  name=""
+  friendName=""
+  friendNickName=""
+  DescribeYourFriend=""
+
+  readAdd=()=>
+  {
+    let data:any={"name":this.name,
+    "friendsName":this.friendName,
+    "friendsNickname":this.friendNickName,
+    "DescribeYourFriend":this.DescribeYourFriend}
+  console.log(data)
+  }
+
 }

@@ -35,9 +35,18 @@ const myrout:Routes=[
   {
     path:"galary",
     component:GalaryComponent
+  },
+  {
+    path:"viewfriend",
+    component:ViewfriendComponent
+  },
+  {
+    path:"viewcourse",
+    component:ViewcourseComponent
   }
 
 ]
+
 
 
 @NgModule({
