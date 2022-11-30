@@ -3,14 +3,99 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { GalaryComponent } from './galary/galary.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { NavComponent } from './nav/nav.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ViewcourseComponent } from './viewcourse/viewcourse.component';
+import { ViewfriendComponent } from './viewfriend/viewfriend.component';
+import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
+import { EmployeesignupComponent } from './employeesignup/employeesignup.component';
+import { AddfriendComponent } from './addfriend/addfriend.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NavbareComponent } from './navbare/navbare.component';
+
+const myrout:Routes=[
+  {
+    path:"",
+    component:HomeComponent
+  },
+  {
+    path:"about",
+    component:AboutComponent
+  },
+  {
+    path:"contact",
+    component:ContactComponent
+  },
+  {
+    path:"galary",
+    component:GalaryComponent
+  },
+  {
+    path:"viewfriend",
+    component:ViewfriendComponent
+  },
+  {
+    path:"viewcourse",
+    component:ViewcourseComponent
+  },
+  {
+    path:"addfriend",
+    component:AddfriendComponent
+  },
+  {
+    path:"addcourse",
+    component:AddcourseComponent
+  },
+  {
+    path:"employeesignup",
+    component:EmployeesignupComponent
+  },
+  {
+    path:"employeelogin",
+    component:EmployeeloginComponent
+  },
+
+  {
+  path:"adminlogin",
+  component:AdminloginComponent
+
+  }
+]
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    GalaryComponent,
+    AboutComponent,
+    ContactComponent,
+    NavComponent,
+    AdminloginComponent,
+    ViewcourseComponent,
+    ViewfriendComponent,
+    EmployeeloginComponent,
+    EmployeesignupComponent,
+    AddfriendComponent,
+    AddcourseComponent,
+    NavbarComponent,
+    NavbareComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myrout),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
