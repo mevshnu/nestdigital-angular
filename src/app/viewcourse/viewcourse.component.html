@@ -12,12 +12,12 @@
                     <th>Course Venue</th>
                 </tr>
             </thead>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let i of courses">
+                <td>{{i.courseTitle}}</td>
+                <td>{{i.courseDescription}}</td>
+                <td>{{i.courseDuration}}</td>
+                <td>{{i.courseDate}}</td>
+                <td>{{i.courseVenue}}</td>
             </tr>
             </table>
         </div>
