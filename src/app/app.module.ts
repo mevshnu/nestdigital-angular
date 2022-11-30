@@ -53,8 +53,21 @@ const myrout:Routes=[
   {
     path:"addcourse",
     component:AddcourseComponent
-  }
+  },
+  {
+    path:"employeesignup",
+    component:EmployeesignupComponent
+  },
+  {
+    path:"employeelogin",
+    component:EmployeeloginComponent
+  },
 
+  {
+  path:"adminlogin",
+  component:AdminloginComponent
+
+  }
 ]
 
 

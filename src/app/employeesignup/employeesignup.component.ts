@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employeesignup',
@@ -7,4 +8,36 @@ import { Component } from '@angular/core';
 })
 export class EmployeesignupComponent {
 
+  constructor(private route:Router){}
+
+  empid=""
+  firstname=""
+  lastname=""
+  houseno=""
+  streetname=""
+  pincode=""
+  district=""
+  state=""
+  country=""
+  mobile=""
+  email=""
+  parentname=""
+  gender=""
+  degree=""
+  experience=""
+  dob=""
+  username=""
+  password=""
+  cpassword=""
+readValues=()=>
+{
+  if(this.password==this.cpassword)
+  {
+    alert("registered Successfully")
+    this.route.navigate(["/employeelogin"])
+  }
+  else{
+    alert("Password and confirm password not match")
+  }
+}
 }
