@@ -25,7 +25,7 @@ export class EmployeesignupComponent {
   gender=""
   degree=""
   experience=""
-  dob=""
+  doj=""
   username=""
   password=""
   cpassword=""
