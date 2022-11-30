@@ -15,6 +15,30 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
 import { EmployeesignupComponent } from './employeesignup/employeesignup.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+const myrout:Routes=[
+  {
+    path:"",
+    component:HomeComponent
+  },
+  {
+    path:"about",
+    component:AboutComponent
+  },
+  {
+    path:"contact",
+    component:ContactComponent
+  },
+  {
+    path:"galary",
+    component:GalaryComponent
+  }
+
+]
+
 
 @NgModule({
   declarations: [
@@ -34,7 +58,10 @@ import { AddcourseComponent } from './addcourse/addcourse.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myrout),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
